@@ -16,6 +16,7 @@ protocol ListDetailViewControllerDelegate: class {
 
 class ListDetailViewController: UITableViewController, UITextFieldDelegate{
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     weak var delegate: ListDetailViewControllerDelegate?
@@ -56,7 +57,11 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate{
     // MARK: - TableView delegates
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
+        if indexPath.section==1 {
+            return indexPath
+        } else{
+            return nil
+        }
     }
     
     // MARK: - UITextFiled delegates
@@ -65,7 +70,9 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate{
         let oldText = textField.text!
         let stringRange = Range(range, in: oldText)!
         let newText = oldText.replacingCharacters(in: stringRange, with: string)
+        print("CHECK TEXT")
         if newText.isEmpty {
+            print("NO TEXT")
             doneButton.isEnabled = false
         }   else{
             doneButton.isEnabled=true
