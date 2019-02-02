@@ -30,4 +30,11 @@ class IconPickerViewController: UITableViewController {
         print(cell.textLabel!.text)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let delegate = delegate{
+            let imageWhitchPicked = icons[indexPath.row]
+            delegate.iconPicker(self, didPick: imageWhitchPicked)
+        }
+    }
 }

@@ -200,18 +200,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgD-os-4Nh">
-                                                    <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgD-os-4Nh">
+                                                    <rect key="frame" x="16" y="11" width="33" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFZ-m7-EHd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mFZ-m7-EHd">
                                                     <rect key="frame" x="297" y="3" width="36" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="b8J-44-8SG"/>
+                                                        <constraint firstAttribute="height" constant="36" id="t3o-gw-ULL"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mFZ-m7-EHd" secondAttribute="trailing" constant="8" id="2E9-Mz-Ap5"/>
+                                                <constraint firstItem="mFZ-m7-EHd" firstAttribute="top" secondItem="T9c-df-gIO" secondAttribute="top" constant="3" id="AsN-0g-zDC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="lEM-Ih-9gf" kind="show" identifier="PickIcon" id="WGP-iW-ZhB"/>
@@ -308,4 +315,5 @@
         <segue reference="Xnm-w4-jIq"/>
         <segue reference="34R-0J-BkN"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.85604780974882022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
