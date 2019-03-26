@@ -103,7 +103,7 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     func configureText(for cell: UITableViewCell, with item: CheckListItem){
         
         let labelInCell = cell.viewWithTag(44) as! UILabel
-        labelInCell.text = item.text
+        labelInCell.text = "\(item.itemID): \(item.text)"
     }
     
 }
