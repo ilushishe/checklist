@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "checklist/ViewControllers/ItemDetailViewController.swift"
+            timestampString = "575444580.0532089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "ItemDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "checklist.ItemDetailViewController.datePickerCell.getter : weak Swift.Optional&lt;__C.UITableViewCell&gt;"
+                  moduleName = "checklist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilushishe/Documents/iOSProjects/checklist/checklist/ViewControllers/ItemDetailViewController.swift"
+                  timestampString = "575443449.50626"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "checklist.ItemDetailViewController.datePickerCell.setter : weak Swift.Optional&lt;__C.UITableViewCell&gt;"
+                  moduleName = "checklist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilushishe/Documents/iOSProjects/checklist/checklist/ViewControllers/ItemDetailViewController.swift"
+                  timestampString = "575443449.508643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "checklist.ItemDetailViewController.init(style: __C.UITableViewStyle) -&gt; checklist.ItemDetailViewController"
+                  moduleName = "checklist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilushishe/Documents/iOSProjects/checklist/checklist/ViewControllers/ItemDetailViewController.swift"
+                  timestampString = "575443449.51003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "518">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "checklist.ItemDetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; checklist.ItemDetailViewController"
+                  moduleName = "checklist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilushishe/Documents/iOSProjects/checklist/checklist/ViewControllers/ItemDetailViewController.swift"
+                  timestampString = "575443449.5113389"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "486">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "checklist.ItemDetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;checklist.ItemDetailViewController&gt;"
+                  moduleName = "checklist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilushishe/Documents/iOSProjects/checklist/checklist/ViewControllers/ItemDetailViewController.swift"
+                  timestampString = "575443449.512624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "457">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -178,7 +178,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="yCs-ON-kxu" id="IkT-9f-Q8J"/>
-                        <outlet property="datePickerCell" destination="kLb-d6-FJs" id="f0T-e9-sK0"/>
+                        <outlet property="datePickerCell" destination="kLb-d6-FJs" id="CCp-Lh-Jld"/>
                         <outlet property="doneButton" destination="Rho-Of-lhv" id="8nF-2C-uCH"/>
                         <outlet property="dueDateLabel" destination="ri8-Mc-hsA" id="cUl-rT-m0G"/>
                         <outlet property="shouldRemindSwitch" destination="gTH-28-89P" id="Vxz-Pl-OJo"/>
@@ -193,7 +193,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-ON-kxu">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-ON-kxu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
                                 <date key="date" timeIntervalSinceReferenceDate="572611974.78016996">
                                     <!--2019-02-23 10:52:54 +0000-->
@@ -201,10 +201,8 @@
                             </datePicker>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="yCs-ON-kxu" secondAttribute="bottom" id="7g5-e9-QyG"/>
-                            <constraint firstAttribute="trailing" secondItem="yCs-ON-kxu" secondAttribute="trailing" id="Jhr-Wi-x46"/>
-                            <constraint firstItem="yCs-ON-kxu" firstAttribute="leading" secondItem="ypn-5H-c9h" secondAttribute="leading" id="YY4-lo-WXe"/>
-                            <constraint firstItem="yCs-ON-kxu" firstAttribute="top" secondItem="ypn-5H-c9h" secondAttribute="top" id="wAj-va-yoa"/>
+                            <constraint firstAttribute="trailing" secondItem="yCs-ON-kxu" secondAttribute="trailing" id="U39-0f-ma1"/>
+                            <constraint firstItem="yCs-ON-kxu" firstAttribute="leading" secondItem="ypn-5H-c9h" secondAttribute="leading" id="ur2-9f-JM3"/>
                         </constraints>
                     </tableViewCellContentView>
                 </tableViewCell>

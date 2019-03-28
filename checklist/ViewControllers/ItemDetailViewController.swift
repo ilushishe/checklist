@@ -84,8 +84,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if indexPath.section == 1 && indexPath.row == 2 {
+            print("TOST")
             return datePickerCell
         } else {
+            print("TOST2")
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
     }
@@ -118,10 +120,9 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         textField.resignFirstResponder()
-        
         if indexPath.section == 1 && indexPath.row == 1{
             showDatePicker()
             print("NOGA99")
