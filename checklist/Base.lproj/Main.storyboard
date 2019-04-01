@@ -198,6 +198,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="572611974.78016996">
                                     <!--2019-02-23 10:52:54 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateChangedWith_datePicker:" destination="kUq-j9-Yk7" eventType="valueChanged" id="3H8-js-8iU"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <constraints>

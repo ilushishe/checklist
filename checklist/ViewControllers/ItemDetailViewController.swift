@@ -22,6 +22,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var datePickerCell: UITableViewCell!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBAction func dateChanged(_datePicker: UIDatePicker){
+        dueDate = datePicker.date
+        updateDueDateLabel()
+    }
     
     weak var delegate: ItemDetailViewControllerDelegate?
     var itemToEdit : CheckListItem?
@@ -138,8 +142,20 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     func showDatePicker(){
         datePickerVisible = true
+        
+        let indexPathDateRow = IndexPath(row: 1, section: 1)
         let indexPathDatePicker = IndexPath(row: 2, section: 1)
+        
+        if let dateCell = tableView.cellForRow(at: indexPathDateRow){
+            dateCell.detailTextLabel!.textColor = dateCell.detailTextLabel?.tintColor
+        }
+        
+        tableView.beginUpdates()
         tableView.insertRows(at: [indexPathDatePicker], with: .fade)
-        print("JOPA123123")
+        tableView.reloadRows(at: [indexPathDateRow], with: .none)
+        tableView.endUpdates()
+        
+        datePicker.setDate(dueDate, animated: true)
+
     }
 }
