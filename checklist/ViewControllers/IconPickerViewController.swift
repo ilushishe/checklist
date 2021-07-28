@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol IconPickerViewControllerDelegate: class {
+protocol IconPickerViewControllerDelegate: AnyObject {
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String)
 }
 
@@ -27,7 +27,6 @@ class IconPickerViewController: UITableViewController {
         let iconName = icons[indexPath.row]
         cell.textLabel!.text = iconName
         cell.imageView?.image = UIImage(named: iconName)
-        print(cell.textLabel!.text)
         return cell
     }
     

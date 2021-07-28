@@ -27,7 +27,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
     
     func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist) {
-        let newRowIndex = dataModel.lists.count
+        //let newRowIndex = dataModel.lists.count
         dataModel.lists.append(checklist)
         dataModel.sortChecklists()
         tableView.reloadData()
@@ -121,7 +121,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowChecklist" {
             let controller = segue.destination as! CheckListViewController
-            controller.checklist = sender as! Checklist
+            controller.checklist = sender as? Checklist
         } else if segue.identifier == "AddChecklist"{
             let controller = segue.destination as! ListDetailViewController
             controller.delegate = self

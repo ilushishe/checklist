@@ -63,8 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
     
     func saveData() {
-        let navigationController = window!.rootViewController as! UINavigationController
-        let controller = navigationController.viewControllers[0] as! AllListsViewController
+        //let navigationController = window!.rootViewController as! UINavigationController
+        //let controller = navigationController.viewControllers[0] as! AllListsViewController
         dataModel.saveChecklists()
     }
     
