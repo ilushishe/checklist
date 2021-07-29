@@ -20,6 +20,7 @@
 		0AE75A3621F3228000F609F4 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE75A3521F3228000F609F4 /* IconPickerViewController.swift */; };
 		0AF9626F219B4A9D00E39EC0 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9626E219B4A9D00E39EC0 /* ChecklistItem.swift */; };
 		3962B65426B2A2090068C31A /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962B65326B2A2090068C31A /* UITests.swift */; };
+		3962B65C26B2D6270068C31A /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962B65B26B2D6270068C31A /* TestBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		3962B65126B2A2090068C31A /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3962B65326B2A2090068C31A /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		3962B65526B2A2090068C31A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3962B65B26B2D6270068C31A /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				3962B65326B2A2090068C31A /* UITests.swift */,
 				3962B65526B2A2090068C31A /* Info.plist */,
+				3962B65B26B2D6270068C31A /* TestBase.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3962B65C26B2D6270068C31A /* TestBase.swift in Sources */,
 				3962B65426B2A2090068C31A /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
