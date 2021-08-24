@@ -21,6 +21,7 @@
 		0AF9626F219B4A9D00E39EC0 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9626E219B4A9D00E39EC0 /* ChecklistItem.swift */; };
 		3962B65426B2A2090068C31A /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962B65326B2A2090068C31A /* UITests.swift */; };
 		3962B65C26B2D6270068C31A /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962B65B26B2D6270068C31A /* TestBase.swift */; };
+		3962B65F26B2E79D0068C31A /* locators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962B65E26B2E79D0068C31A /* locators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3962B65326B2A2090068C31A /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		3962B65526B2A2090068C31A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3962B65B26B2D6270068C31A /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
+		3962B65E26B2E79D0068C31A /* locators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locators.swift; path = Pages/locators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,11 +139,20 @@
 		3962B65226B2A2090068C31A /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				3962B65E26B2E79D0068C31A /* locators.swift */,
+				3962B65D26B2E77F0068C31A /* Pages */,
 				3962B65326B2A2090068C31A /* UITests.swift */,
-				3962B65526B2A2090068C31A /* Info.plist */,
 				3962B65B26B2D6270068C31A /* TestBase.swift */,
+				3962B65526B2A2090068C31A /* Info.plist */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		3962B65D26B2E77F0068C31A /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				3962B65C26B2D6270068C31A /* TestBase.swift in Sources */,
 				3962B65426B2A2090068C31A /* UITests.swift in Sources */,
+				3962B65F26B2E79D0068C31A /* locators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

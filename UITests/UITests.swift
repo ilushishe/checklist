@@ -11,7 +11,12 @@ import XCTest
 class UITests: TestBase {
 
     func testExample() throws {
-       print("started")
+        app.buttons["AddBarButtonItem"].tap()
+        app.textFields["nameOfTheListTextField"].typeText("test")
+        app.cells["IconCell"].tap()
+        app.cells["IdeaIcon"].tap()
+        app.buttons["DoneBarButtonItem"].tap()
+        XCTAssert( app.cells.staticTexts["test"].exists, "pupa lupa")
     }
 
     func testLaunchPerformance() throws {
