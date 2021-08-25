@@ -11,7 +11,7 @@ import XCTest
 
 class TestBase: XCTestCase {
     
-    var app = XCUIApplication()
+    let app = XCUIApplication()
     
     override func setUpWithError() throws {
         continueAfterFailure = false

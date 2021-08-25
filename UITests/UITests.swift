@@ -10,13 +10,20 @@ import XCTest
 
 class UITests: TestBase {
 
-    func testExample() throws {
-        app.buttons["AddBarButtonItem"].tap()
-        app.textFields["nameOfTheListTextField"].typeText("test")
-        app.cells["IconCell"].tap()
-        app.cells["IdeaIcon"].tap()
-        app.buttons["DoneBarButtonItem"].tap()
-        XCTAssert( app.cells.staticTexts["test"].exists, "pupa lupa")
+    func testCreateCheckListWithCHosingIcon() throws {
+        let allListsScreen = AllLists()
+        let addCheckListScreen = AddChecklist()
+        let chooseIconScreen = ChooseIcon()
+        
+        
+        allListsScreen.tapOnAddChecklistButton()
+        addCheckListScreen.fillCheckListNameTextField()
+        addCheckListScreen.tapOnTheChooseIconButton()
+        chooseIconScreen.chooseIcon()
+        addCheckListScreen.saveCheckList()
+
+        //вот тут тоже надо подумать как передовать текст для ассерта
+        XCTAssert( app.cells.staticTexts["My Test Name For Check List"].exists, "Созданный чеклист не отображается")
     }
 
     func testLaunchPerformance() throws {

@@ -16,14 +16,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         // ===  проверяет, что ссылки ссылаются на один и тот же объект
         if viewController === self {
             dataModel.indexForSelectedChecklist = -1
-            print("back")
         }
     }
 
     // MARK: - ListDetailViewController delegates
     func listDetailViewControllerDidCancel(_ controller: ListDetailViewController) {
         navigationController?.popViewController(animated: true)
-        print("Test2")
     }
     
     func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist) {
@@ -45,7 +43,6 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        print("didload")
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -17,10 +17,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="checklistItem" id="O0Y-hq-MrX">
-                                <rect key="frame" x="0.0" y="24.5" width="375" height="44.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O0Y-hq-MrX" id="6qK-hc-xKo">
-                                    <rect key="frame" x="0.0" y="0.0" width="321" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-jG-2ZD">
@@ -31,7 +31,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="44" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj0-Mv-f91">
-                                            <rect key="frame" x="51" y="11" width="33" height="21.5"/>
+                                            <rect key="frame" x="51" y="11" width="33" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -226,7 +226,7 @@
                     <navigationItem key="navigationItem" title="AllLists" id="2l6-Gr-rQ2">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="gMd-op-cu1" userLabel="Add">
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="AddBarButtonItem"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="add_checklist_barbutton"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibillityElement" value="YES"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
@@ -263,7 +263,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uc6-y2-Oa6">
                                                     <rect key="frame" x="16" y="11" width="343" height="30.5"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="nameOfTheListTextField"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="name_of_checklist_textfield"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -332,7 +332,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="H3T-wo-NbM">
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="DoneBarButtonItem"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="done_barbutton"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibillityElement" value="YES"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
