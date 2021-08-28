@@ -8,22 +8,21 @@
 
 import XCTest
 
-class UITests: TestBase {
+class ChecklistUITests: TestBase {
 
     func testCreateCheckListWithCHosingIcon() throws {
-        let allListsScreen = AllLists()
-        let addCheckListScreen = AddChecklist()
-        let chooseIconScreen = ChooseIcon()
+        let allListsScreen = AllListsScreen()
+        let addCheckListScreen = AddChecklistScreen()
+        let chooseIconScreen = ChooseIconScreen()
         
         
         allListsScreen.tapOnAddChecklistButton()
-        addCheckListScreen.fillCheckListNameTextField()
+        addCheckListScreen.typeChecklistName(text: TestData.Texts.checklistName)
         addCheckListScreen.tapOnTheChooseIconButton()
-        chooseIconScreen.chooseIcon()
+        chooseIconScreen.chooseIcon(icon: TestData.Icons.loupe)
         addCheckListScreen.saveCheckList()
 
-        //вот тут тоже надо подумать как передовать текст для ассерта
-        XCTAssert( app.cells.staticTexts["My Test Name For Check List"].exists, "Созданный чеклист не отображается")
+        XCTAssert( app.cells.staticTexts[TestData.Texts.checklistName].exists, "Созданный чеклист не отображается")
     }
 
     func testLaunchPerformance() throws {

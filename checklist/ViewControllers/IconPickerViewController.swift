@@ -14,7 +14,7 @@ protocol IconPickerViewControllerDelegate: AnyObject {
 
 class IconPickerViewController: UITableViewController {
     weak var delegate: IconPickerViewControllerDelegate?
-    let icons = ["loupe", "IdeaIcon"]
+    let icons = ["LoupeIcon", "IdeaIcon"]
     
     //MARK: - TableView Delegates
     

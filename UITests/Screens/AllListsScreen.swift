@@ -9,13 +9,11 @@
 import Foundation
 import XCTest
 
-class AllLists: TestBase  {
+class AllListsScreen: TestBase  {
     
     // MARK: - elements
     
-    var addChecklistButton: XCUIElement {
-        return app.buttons["add_checklist_barbutton"]
-    }
+    var addChecklistButton: XCUIElement {app.buttons["add_checklist_barbutton"]}
     
     // MARK: - actions
     
