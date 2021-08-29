@@ -18,17 +18,23 @@ class AddChecklistScreen: TestBase  {
     var doneButton: XCUIElement {app.buttons["done_barbutton"]}
     
     // MARK: - Actions
-        
-    func typeChecklistName(text: String) {
+    
+    @discardableResult
+    func typeChecklistName(text: String) -> Self {
         nameOfChecklistTextfield.tap()
         nameOfChecklistTextfield.typeText(text)
+        return self
     }
     
-    func tapOnTheChooseIconButton() {
+    @discardableResult
+    func tapOnTheChooseIconButton() -> Self {
         chooseIconButton.tap()
+        return self
     }
     
-    func saveCheckList() {
+    @discardableResult
+    func saveCheckList() -> Self {
         doneButton.tap()
+        return self
     }
 }

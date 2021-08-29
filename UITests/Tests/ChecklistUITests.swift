@@ -16,20 +16,34 @@ class ChecklistUITests: TestBase {
 
     func testCreateCheckListWithChosingIcon() throws {
         
-        allListsScreen.tapOnAddChecklistButton()
-        addCheckListScreen.typeChecklistName(text: TestData.Texts.checklistName)
-        addCheckListScreen.tapOnTheChooseIconButton()
-        chooseIconScreen.chooseIcon(icon: TestData.Icons.loupe)
-        addCheckListScreen.saveCheckList()
+        allListsScreen
+            .tapOnAddChecklistButton()
+        
+        addCheckListScreen
+            .typeChecklistName(text: TestData.Texts.checklistName)
+            .tapOnTheChooseIconButton()
+        
+        chooseIconScreen
+            .chooseIcon(icon: TestData.Icons.loupe)
+        
+        addCheckListScreen
+            .saveCheckList()
+        
         XCTAssert(allListsScreen.checklistCells.staticTexts[TestData.Texts.checklistName].exists, "Созданный чеклист не отображается")
     }
     
     func testDeleteCheckList() {
 
-        allListsScreen.tapOnAddChecklistButton()
-        addCheckListScreen.typeChecklistName(text: TestData.Texts.checklistName)
-        addCheckListScreen.saveCheckList()
-        allListsScreen.removeFirstChecklist()
+        allListsScreen
+            .tapOnAddChecklistButton()
+        
+        addCheckListScreen
+            .typeChecklistName(text: TestData.Texts.checklistName)
+            .saveCheckList()
+        
+        allListsScreen
+            .removeFirstChecklist()
+        
         XCTAssert(allListsScreen.checklistCells.count == 0, "Чеклист не удален")
     }
 }

@@ -18,11 +18,15 @@ class AllListsScreen: TestBase  {
     
     // MARK: - actions
     
-    func tapOnAddChecklistButton() {
+    @discardableResult
+    func tapOnAddChecklistButton() ->Self {
         addChecklistButton.tap()
+        return self
     }
     
-    func removeFirstChecklist() {
+    @discardableResult
+    func removeFirstChecklist() -> Self {
         super.deleteTableCellBySwipe(cell: checklistCells.element(boundBy: 0))
+        return self
     }
 }

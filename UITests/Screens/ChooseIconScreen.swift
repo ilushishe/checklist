@@ -16,8 +16,10 @@ class ChooseIconScreen: TestBase {
     var iconCells: XCUIElementQuery {app.cells}
     
     // MARK: - actions
-
-    func chooseIcon(icon: String) {
+    
+    @discardableResult
+    func chooseIcon(icon: String) -> Self {
         iconCells[icon].tap()
+        return self
     }
 }

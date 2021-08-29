@@ -144,14 +144,30 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		394F566E26DBB008008697E3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3962B65B26B2D6270068C31A /* TestBase.swift */,
+				3962B65326B2A2090068C31A /* ChecklistUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		394F566F26DBB028008697E3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				39DF293526DA589D004EDF8A /* TestData.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3962B65226B2A2090068C31A /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				394F566F26DBB028008697E3 /* Utils */,
+				394F566E26DBB008008697E3 /* Tests */,
 				3962B65D26B2E77F0068C31A /* Screens */,
-				3962B65326B2A2090068C31A /* ChecklistUITests.swift */,
-				3962B65B26B2D6270068C31A /* TestBase.swift */,
 				3962B65526B2A2090068C31A /* Info.plist */,
-				39DF293526DA589D004EDF8A /* TestData.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
