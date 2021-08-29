@@ -9,28 +9,27 @@
 import XCTest
 
 class ChecklistUITests: TestBase {
+    
+    let allListsScreen = AllListsScreen()
+    let addCheckListScreen = AddChecklistScreen()
+    let chooseIconScreen = ChooseIconScreen()
 
-    func testCreateCheckListWithCHosingIcon() throws {
-        let allListsScreen = AllListsScreen()
-        let addCheckListScreen = AddChecklistScreen()
-        let chooseIconScreen = ChooseIconScreen()
-        
+    func testCreateCheckListWithChosingIcon() throws {
         
         allListsScreen.tapOnAddChecklistButton()
         addCheckListScreen.typeChecklistName(text: TestData.Texts.checklistName)
         addCheckListScreen.tapOnTheChooseIconButton()
         chooseIconScreen.chooseIcon(icon: TestData.Icons.loupe)
         addCheckListScreen.saveCheckList()
-
-        XCTAssert( app.cells.staticTexts[TestData.Texts.checklistName].exists, "Созданный чеклист не отображается")
+        XCTAssert(allListsScreen.checklistCells.staticTexts[TestData.Texts.checklistName].exists, "Созданный чеклист не отображается")
     }
+    
+    func testDeleteCheckList() {
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+        allListsScreen.tapOnAddChecklistButton()
+        addCheckListScreen.typeChecklistName(text: TestData.Texts.checklistName)
+        addCheckListScreen.saveCheckList()
+        allListsScreen.removeFirstChecklist()
+        XCTAssert(allListsScreen.checklistCells.count == 0, "Чеклист не удален")
     }
 }

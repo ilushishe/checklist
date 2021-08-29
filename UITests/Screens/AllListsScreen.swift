@@ -14,10 +14,15 @@ class AllListsScreen: TestBase  {
     // MARK: - elements
     
     var addChecklistButton: XCUIElement {app.buttons["add_checklist_barbutton"]}
+    var checklistCells: XCUIElementQuery {app.cells}
     
     // MARK: - actions
     
     func tapOnAddChecklistButton() {
         addChecklistButton.tap()
+    }
+    
+    func removeFirstChecklist() {
+        super.deleteTableCellBySwipe(cell: checklistCells.element(boundBy: 0))
     }
 }
