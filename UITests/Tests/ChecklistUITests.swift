@@ -13,6 +13,8 @@ class ChecklistUITests: TestBase {
     let allListsScreen = AllListsScreen()
     let addCheckListScreen = AddChecklistScreen()
     let chooseIconScreen = ChooseIconScreen()
+    let checklistDetailScreen = ChecklistDetailScreen()
+    let addItemScreen = AddItemScreen()
 
     func testCreateCheckListWithChosingIcon() throws {
         
@@ -43,7 +45,38 @@ class ChecklistUITests: TestBase {
         
         allListsScreen
             .removeFirstChecklist()
-        
         XCTAssert(allListsScreen.checklistCells.count == 0, "Чеклист не удален")
     }
+    
+    func testAddItemInChecklist() {
+        
+//        может создавать чеклист просто записью в файл?
+        allListsScreen
+            .tapOnAddChecklistButton()
+
+        addCheckListScreen
+            .typeChecklistName(text: TestData.Texts.checklistName)
+            .saveCheckList()
+
+        allListsScreen
+            .openChecklist(name: TestData.Texts.checklistName)
+
+        checklistDetailScreen
+            .tapOnAddItemButton()
+        
+        addItemScreen
+            .typeChecklistName(text: TestData.Texts.itemName)
+            .tapOnRemindMeSwtcher()
+            .setDueDate()
+            .chooseDayInDatePicker(day: TestData.Dates.tomorrow)
+            .closeDatePickerBySwipeDown()
+            .saveItem()
+        
+        XCTAssert(checklistDetailScreen.itemCells.staticTexts[TestData.Texts.itemName].exists, "Созданный item не отображается")
+    }
+    
+
+    //testDeleteItem
+    //testMakeIItemComlete
+    //testWaitUntilNotificationAppears
 }

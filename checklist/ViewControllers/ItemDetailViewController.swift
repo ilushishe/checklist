@@ -26,6 +26,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func dateChanged(_datePicker: UIDatePicker){
         dueDate = datePicker.date
         updateDueDateLabel()
+        
     }
     
     weak var delegate: ItemDetailViewControllerDelegate?
@@ -103,10 +104,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if indexPath.section == 1 && indexPath.row == 2 {
-            print("TOST")
             return datePickerCell
         } else {
-            print("TOST2")
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
     }

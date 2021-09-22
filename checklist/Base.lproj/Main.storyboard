@@ -56,6 +56,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Name of the Checklist" id="5RO-jZ-lmM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9xl-Cv-5gp">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="add_item_barbutton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="kUq-j9-Yk7" kind="show" identifier="AddItem" id="34R-0J-BkN"/>
                             </connections>
@@ -86,6 +89,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-6Q-eiO">
                                                     <rect key="frame" x="16" y="6" width="343" height="30.5"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="name_of_item_textfield"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -122,6 +126,7 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gTH-28-89P">
                                                     <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="remind_me_switcher"/>
                                                     <connections>
                                                         <action selector="shouldRemindToggled:" destination="kUq-j9-Yk7" eventType="valueChanged" id="bV4-aa-qKg"/>
                                                     </connections>
@@ -172,6 +177,9 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="Rho-Of-lhv">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="done_barbutton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="done" destination="kUq-j9-Yk7" id="yJg-jG-cma"/>
                             </connections>
@@ -195,7 +203,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-ON-kxu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="351"/>
+                                <locale key="locale" localeIdentifier="en"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="item_date_picker"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibillityElement" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="dateChangedWith_datePicker:" destination="kUq-j9-Yk7" eventType="valueChanged" id="3H8-js-8iU"/>
                                 </connections>

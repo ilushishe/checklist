@@ -29,4 +29,10 @@ class AllListsScreen: TestBase  {
         super.deleteTableCellBySwipe(cell: checklistCells.element(boundBy: 0))
         return self
     }
+    
+    @discardableResult
+    func openChecklist(name: String) -> Self {
+        checklistCells.staticTexts[name].tap()
+        return self
+    }
 }
